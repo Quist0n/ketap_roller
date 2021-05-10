@@ -11,7 +11,7 @@ results = list()
 args = sys.argv[1:]
 
 def roll_dice(dice_num=MIN_DICE, dice_sides=20, mod=DEFAULT_MOD):
-    if (dice_num < MIN_DICE) or (dice_sides <= MIN_SIDES):
+    if (dice_num < MIN_DICE) or (dice_sides < MIN_SIDES):
        size_err_msg = f'''
        dice_num must be
        {MIN_DICE} or greater and dice_sides must be
