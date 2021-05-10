@@ -22,7 +22,8 @@ def roll_dice(dice_num=MIN_DICE, dice_sides=20, mod=DEFAULT_MOD):
         i = 0
         while i < dice_num:
 
-            yield randint(MIN_ROLL, dice_sides) + mod
+            ans = randint(MIN_ROLL, dice_sides)
+            yield (ans, ans + mod)
             i += 1
 
 def parse_args(input_arr):
@@ -71,10 +72,10 @@ def parse_args(input_arr):
 def play(input):
 
     for i in parse_args(input):
-        for j in roll_dice(i[0], i[1], i[2]):
+        for j,k in roll_dice(i[0], i[1], i[2]):
             if i[2] >= 0:
-                print(f"Result of {i[0]}d{i[1]}+{i[2]} is: {j}")
+                print(f"Result of {i[0]}d{i[1]}+{i[2]} is: {k} [nat: {j}]")
             elif i[2] < 0:
-                print(f"Result of {i[0]}d{i[1]}{i[2]} is: {j}")
+                print(f"Result of {i[0]}d{i[1]}{i[2]} is: {k} [nat: {j}]")
 
 play(args)
