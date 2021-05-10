@@ -19,7 +19,7 @@ and ``mod`` is the amount you want to take away or add to the result of the roll
 $ ketap_roller.py 1d20+4 6d4+2 2d12+5 1d10-3
 ```
 
-You can chain multipel ``<die_spec>`` together in order to roll multiple kinds of dice with modifiers.
+You can chain multiple ``<die_spec>`` together in order to roll multiple kinds of dice with modifiers.
 
 # Note
 
