@@ -58,7 +58,6 @@ def parse_args(input_arr):
             input_dice_num = int(input_dice_num)
             input_dice_sides = int(input_dice_sides)
             input_dice_mod = int(input_dice_mod)
-            print(input_dice_mod)
         except ValueError or AttributeError:
             print ("Failed to parse dice info")
             sys.exit(1)
